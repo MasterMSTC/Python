@@ -10,3 +10,5 @@ f = file.read()
 
 # Transform the bitstream into strings
 text = f.decode(encoding='utf-8', errors='ignore')
+
+NNNN
