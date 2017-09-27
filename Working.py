@@ -28,3 +28,21 @@ f = file.read()
 # Transform the bitstream into strings
 text = f.decode(encoding='utf-8', errors='ignore')
 
+# Initalising the dictionary
+reviews = {}
+
+# Filling the dictionary
+for line in lines:
+    l = line.strip().split("\t")
+
+    # These are just training wheels to see more clearly what goes into the dictionary
+    score = l[0]
+    id = l[1]
+    title = l[2]
+    review = l[3]
+
+    # NOTICE: each dict entry is also a DICT !!
+
+    reviews[id] = {"score": score, "title": title, "review": review}
+
+
